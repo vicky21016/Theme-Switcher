@@ -24,12 +24,12 @@
 
 ```bash
 npm install
-
-2.開發環境啟動：
-
+```
+2. 開發環境啟動：
+```bash
 npm run dev
-
-3.瀏覽網址：
+```
+3. 瀏覽網址：
+```bash
 http://localhost:3000
-
-
+```
