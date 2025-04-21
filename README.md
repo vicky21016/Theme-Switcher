@@ -10,18 +10,6 @@
 - Context API（主題切換）
 - RWD 響應式設計
 
-## 專案結構
-/app
-├── page.js               # 首頁組合各元件
-├── page.module.css       # 全站樣式設定
-└── component
-    ├── ThemeContext.js   # Context Provider 與 useTheme hook
-    ├── ThemeSwitchButton.js
-    ├── ThemedBox.js
-    ├── Sidebar.js
-    ├── Header.js
-    └── Main.js
-
 ## 功能介紹
 
 -  使用 `createContext` 與 `useContext` 管理主題狀態
