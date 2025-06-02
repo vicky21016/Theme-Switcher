@@ -1,0 +1,111 @@
+ .courseCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+      transform: scale(1.05); /* 放大 5% */
+      box-shadow: rgba(60, 60, 60, 0.35) 0px 10px 20px; /* 添加陰影提升立體感 */
+    }
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+    @media (max-width: 390px) {
+      padding: 18px 15px;
+    }
+  }
+
+  .img {
+    width: 100%;
+    /* padding: 5px; */
+    object-fit: cover;
+    /* border: 1px solid var(--text-Wh, #f7f7f7); */
+    border-radius: 3px;
+    margin-bottom: 8px;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: var(--Color, #cc3300);
+    color: var(--real-wh, #fff);
+    white-space: nowrap;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 8px 0 14px;
+    box-sizing: border-box;
+    @media (max-width: 390px) {
+      font-size: 12px;
+      padding: 5px 8px;
+    }
+  }
+  .name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    word-wrap: break-word;
+    color: var(--Color, #3b3330);
+    text-overflow: ellipsis;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0 5px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    @media (max-width: 992px) {
+      font-size: 16px;
+      letter-spacing: 0px;
+    }
+    @media (max-width: 390px) {
+      font-size: 16px;
+      min-height: 40px;
+      -webkit-line-clamp: 2;
+    }
+  }
+  .intro {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    max-width: 100%;
+    max-height: 50px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    word-wrap: break-word;
+    align-self: stretch;
+    color: var(--Color, #3b3330);
+    text-overflow: ellipsis;
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 1.4px;
+    padding: 0 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    @media (max-width: 992px) {
+      font-size: 12px;
+      letter-spacing: 0px;
+    }
+    @media (max-width: 390px) {
+      font-size: 12px;
+      -webkit-line-clamp: 3;
+      letter-spacing: 1.5px;
+
+      line-height: 15px;
+    }
+  }
