@@ -7,9 +7,13 @@ import styles from "./about.module.css";
 
 export default function about() {
   return (
-    <div className="wrapper">
-      <h2 className={`fw-bold text-center`}>關於我們</h2>
-      <Breadcrumbs
+   <section>
+   <div className={`${styles.bag}`}>
+      <h2 className={`fw-bold text-center ${styles.about}`}>關於我們</h2>
+      </div>
+       <div className="">
+       <div className="wrapper">
+       <Breadcrumbs
         links={[
           { label: "首頁", href: "/" },
           {
@@ -19,8 +23,8 @@ export default function about() {
           },
         ]}
       />
-      <h4 className={`fw-bold text-center`}>關於立申</h4>
-      <div className={`mb-4 ${styles.sbar}`}></div>
+      <h4 className={`fw-bold my-4`}>關於立申</h4>
+      {/* <div className={`mb-5 ${styles.sbar}`}></div> */}
       <div className="container mb-5">
         <div className="row">
           <div className="col-12 col-md-6">
@@ -32,8 +36,26 @@ export default function about() {
           <div className="col-12 col-md-6"></div>
         </div>
       </div>
-      <h4 className="fw-bold text-center">後勤支援服務</h4>
-            <div className={`mb-5 ${styles.sbar}`}></div>
+     </div>
+     <div className={`pt-1 pb-4 ${styles.management}`}>
+     <div className="wrapper">
+      <h4 className="fw-bold text-center ">經營理念</h4>
+            <div className={`mb-4 ${styles.sbar}`}></div>
+      <div className="container mb-5">
+        <div className="row">
+          <div className="col-12 col-md-6"></div>
+          <div className="col-12 col-md-6 text-center">
+            親切負責的態度、專業至上的服務，我用心、您安心、大家都放心。
+            <br />
+            立申電機，將與您攜手共創美好未來
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div className="wrapper">
+       <h4 className="fw-bold mb-5">後勤支援服務</h4>
+            {/* <div className={`mb-5 ${styles.sbar}`}></div> */}
       <div className="container mb-5">
         <div className="row">
           <Card
@@ -58,19 +80,9 @@ export default function about() {
         link="/support/hmi"
       />
         </div>
-      </div>
-      <h4 className="fw-bold text-center ">經營理念</h4>
-            <div className={`mb-4 ${styles.sbar}`}></div>
-      <div className="container mb-5">
-        <div className="row">
-          <div className="col-12 col-md-6"></div>
-          <div className="col-12 col-md-6 text-center">
-            親切負責的態度、專業至上的服務，我用心、您安心、大家都放心。
-            <br />
-            立申電機，將與您攜手共創美好未來
-          </div>
         </div>
       </div>
     </div>
+    </section>
   );
 }

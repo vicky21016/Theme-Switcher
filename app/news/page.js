@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Breadcrumbs from "../component/Breadcrumbs";
 import NewsCard from "../component/newsCard";
+import styles from "./news.module.css";
 
 export default function News() {
   const [filtered, setFiltered] = useState([]);
@@ -23,8 +24,11 @@ export default function News() {
     startIndex + perPage
   );
   return (
-    <div className="wrapper">
-      <h2 className={`fw-bold text-center`}>訊息中心</h2>
+          <section>
+   <div className={`${styles.bag}`}>
+  
+      <h2 className={`fw-bold text-center ${styles.about}`}>訊息中心</h2></div>
+        <div className="wrapper">
       <Breadcrumbs
         links={[
           { label: "首頁", href: "/" },
@@ -39,5 +43,6 @@ export default function News() {
         return <NewsCard key={course.id} course={course} />;
       })}
     </div>
+     </section>
   );
 }

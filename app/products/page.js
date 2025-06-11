@@ -3,12 +3,14 @@
 import Link from "next/link";
 import Breadcrumbs from "../component/Breadcrumbs";
 import MainCard from "../component/Card"
+import styles from "./product.module.css";
 
 export default function products() {
   return (
-    <div className="wrapper">
-      <h2 className={`fw-bold text-center`}>商品介紹</h2>
-      
+      <section>
+   <div className={`${styles.bag}`}>
+      <h2 className={`fw-bold text-center ${styles.about}`}>商品介紹</h2></div>
+      <div className="wrapper">
       <Breadcrumbs
         links={[
           { label: "首頁", href: "/" },
@@ -21,5 +23,6 @@ export default function products() {
       />
 
     </div>
+    </section>
   );
 }

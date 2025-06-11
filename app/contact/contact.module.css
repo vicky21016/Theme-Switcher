@@ -65,3 +65,17 @@ letter-spacing: 2px;
   color: #999;               /* 預設文字顏色 */
   font-style: italic;
 }
+.bag{
+    background-image: url("/bag6.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+.about{
+display: flex;             
+  justify-content: center;   
+  align-items: center;      
+  text-align: center; 
+  height: 400px;  
+  color: white;
+}

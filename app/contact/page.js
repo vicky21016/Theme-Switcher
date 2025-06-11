@@ -6,8 +6,10 @@ import styles from "./contact.module.css";
 
 export default function contact() {
   return (
-    <div className="wrapper mb-5">
-      <h2 className={`fw-bold text-center`}>聯絡我們</h2>
+          <section>
+   <div className={`${styles.bag}`}>
+      <h2 className={`fw-bold text-center ${styles.about}`}>聯絡我們</h2></div>
+      <div className="wrapper mb-5">
       <Breadcrumbs
         links={[
           { label: "首頁", href: "/" },
@@ -91,5 +93,6 @@ export default function contact() {
       </div>
      
     </div>
+    </section>
   );
 }

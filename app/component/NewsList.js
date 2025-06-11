@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import NewsCard from "./newsCard";
 import styles from "./newsCard.module.css"
 
@@ -29,7 +30,7 @@ export default function NewsList() {
       ))}
     </div>
     <div className="px-3">
-    <button className={`btn w-100 ${styles.readMore}`}>查看更多</button>
+    <Link href={`/news`} className={`btn w-100  d-flex align-items-center justify-content-center ${styles.readMore}`}>查看更多</Link>
     </div>
     </>
   );

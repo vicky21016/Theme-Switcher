@@ -1,5 +1,5 @@
 .bag{
-    background-image: url("/bag1.jpg");
+    background-image: url("/bag3.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
@@ -11,14 +11,4 @@ display: flex;
   text-align: center; 
   height: 400px;  
   color: white;
-}
-.sbar {
-  background-color: #045EDD;
-  width: 60px;
-  height: 1.5px;
-  border-radius: 5px;
-  margin: 0 auto;  
-}
-.management{
-  background-color: #F1F1F2;
 }
