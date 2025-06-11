@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import Breadcrumbs from "../component/Breadcrumbs";
-import NewsCard from "../component/newsCard";
+import Breadcrumbs from "../../component/Breadcrumbs";
+
 
 export default function News() {
   const [filtered, setFiltered] = useState([]);
@@ -35,9 +35,7 @@ export default function News() {
           },
         ]}
       />
-      {currentNews?.map((course) => {
-        return <NewsCard key={course.id} course={course} />;
-      })}
+     
     </div>
   );
 }

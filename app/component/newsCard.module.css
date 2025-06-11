@@ -7,6 +7,15 @@
     padding: 20px;
     cursor: pointer;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-decoration: none; 
+  color: inherit;
+  p{
+    color: #86868A;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 5px;
+    letter-spacing: 1px;
+  }
 
     &:hover {
       transform: scale(1.05); /* 放大 5% */
@@ -41,7 +50,7 @@
     height: 26px;
     padding: 5px 8px;
     border-radius: 5px;
-    background: var(--Color, #cc3300);
+    background: var(--Color, #045EDD);
     color: var(--real-wh, #fff);
     white-space: nowrap;
     font-size: 13px;
@@ -62,12 +71,16 @@
     word-wrap: break-word;
     color: var(--Color, #3b3330);
     text-overflow: ellipsis;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     letter-spacing: 1px;
     padding: 0 5px;
     margin-top: 5px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+
+    &:hover {
+      color: #045EDD;
+    }    
     @media (max-width: 992px) {
       font-size: 16px;
       letter-spacing: 0px;
@@ -109,3 +122,44 @@
       line-height: 15px;
     }
   }
+.readMore{
+  background-color: white;
+  /* width: 100px; */
+  height: 80px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+  /* color: white; */
+  padding: 5px;
+  margin-top: auto;
+  border-radius: 0;
+}
+.readMore:hover{
+    background-color: #045EDD;
+    color: #fff; 
+    /* border-color:#045EDD;  */
+    font-weight: 600;
+  }
+
+    .container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 300px auto 20px;
+}
+
+  .loader27 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0000;
+  animation: loader27-animation 1s infinite alternate linear;
+  background: radial-gradient(circle closest-side, #f6ce5b 94%, #0000)
+    right/calc(200% - 1em) 100%;
+}
+
+.loader27::before {
+  content: "Loading...";
+  background: inherit;
+  background-clip: text;
+  background-image: radial-gradient(circle closest-side, #fff 94%, #045EDD);
+}

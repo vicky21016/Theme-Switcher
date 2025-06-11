@@ -4,6 +4,7 @@ import { FaAngleUp } from "react-icons/fa";
 import styles from "../../page.module.css";
 
 export default function Ontop() {
+  console.log(styles); 
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -19,11 +20,14 @@ export default function Ontop() {
   };
 
   return (
+    // <div className={styles.btns}>
     <button
       className={`${styles.topIcon} ${showButton ? styles.show : ""}`}
       onClick={scrollToTop}
     >
       <FaAngleUp className="fs-4 text-white" />
     </button>
+    // </div>
+    
   );
 }

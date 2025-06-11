@@ -1,18 +1,89 @@
 .footer{
-    background-color: #F5F5F5;
+    background-color: #808085;
+    color: white;
     margin: 0;
+    letter-spacing: 2px;
     p{
         font-size: 14px;
     }
     a{
         text-decoration: none;
-        color: black;
+        color: white;
         font-size: 14px;
     }
+    a:hover{
+      color: black;
+      font-weight: 600;
+    }
 }
+.about{
+  ul{
+    list-style: none;
+  }
+}
+.sbar{
+  color: white;
+    /* width: 50px; */
+  height: 1px;
+}
+
 .bottom{
-    background-color: #EBEBEB;
-    padding: 30px;
-    font-size: 10px;
-    color: #666666;
+    background-color: #808085;
+    padding: 20px;
+    font-size: 9px;
+    color: #fff;
+    letter-spacing: 2px;
+}
+@media (max-width: 768px) {
+  .about{
+    display: none;
+  }
+}
+
+/* Waves Container */
+.wavesContainer {
+  position: relative;
+  width: 100%;
+  height: 15vh; /* 波浪高度 */
+  min-height: 100px; /* 最小高度 */
+  max-height: 150px; /* 最大高度 */
+  overflow: hidden;
+  margin-top: 80px;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  shape-rendering: auto;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+/* 波浪動畫 */
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+/* 波浪動畫移動效果 */
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
 }

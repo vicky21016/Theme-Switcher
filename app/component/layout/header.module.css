@@ -1,5 +1,23 @@
 .header{
-    background-color: #E42C2E;
+    /* background-color: #045EDD; */
+    /* display: flex; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 63px;
+  justify-content: space-between;
+  align-items: center;
+    transition: box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  z-index: 1000;
+  /* color: white; */
+}
+
+.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.212); /* 底部陰影 */
+  background-color: white;
+  backdrop-filter: blur(5px); /* 背景模糊 */
+  color: black;
 }
 
 .nav {
@@ -16,12 +34,17 @@
       letter-spacing: 1px;
       .LumiSB {
         text-decoration: none;
-        color: white;
+        /* color: white; */
         font-weight: bold;
+          color: inherit;
+      }
+      .LumiSB:hover {
+        color: #045EDD;
+        letter-spacing: 2px;
       }
       a:hover {
         text-decoration: none;
-        color: #FFCC66;
+        /* color: white; */
       }
       li{
         margin: 10px 0 ;
@@ -38,31 +61,35 @@
   .dropdown-content {
     display: none;
     position: absolute;
+     overflow: hidden;
+  background-color: black;
     min-width: 110px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    padding: 10px 0;
     .dropdown-link {
     font-size: 14px;
-      padding: 5px 14px;
+      padding: 10px 20px;
       text-decoration: none;
       text-wrap: nowrap;
       display: block;
-      color: black;
+      color: white;
     }
   }
   
   .dropdown-link-top:hover {
     /* border: 1px solid #ffffff; */
-    border-radius: 5px 5px 0 0;
+    /* border-radius: 5px 5px 0 0; */
+    
   }
   .dropdown-link-bottom:hover {
-    border-radius: 0 0 5px 5px;
+    /* border-radius: 0 0 5px 5px; */
   }
   
   .dropdown-link:hover {
-    background: linear-gradient(to bottom, #fff, #e42c2f86);;
-    color: #E42C2E !important;
+    background-color: #045EDD;
+    /* color: #045EDD !important; */
   }
   
   .dropdown:hover .dropdown-content {
@@ -86,7 +113,7 @@
     top: 10;
     /* left: -50; */
     left: -28px;
-    background-color: #E42C2E;
+    background-color: #045EDD;
     min-width: 100px;
     border-radius: 5px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -116,7 +143,7 @@
       position: absolute;
       right: 90px;
       top: -10px;
-      background-color: #E42C2E;
+      background-color: #045EDD;
       min-width: 120px;
       border-radius: 10px;
       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -132,7 +159,7 @@
     }
     .dropdown-link:hover {
       background-color: #ffffff;
-      color: #E42C2E;
+      color: #045EDD;
     }
     .dropdown-contentOff {
       display: none;

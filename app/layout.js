@@ -6,6 +6,7 @@ import Header from "./component/layout/Header";
 import Ontop from "./component/layout/Ontop";
 import Footer from "./component/layout/Footer";
 import Slider from "./component/layout/Slider";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,10 @@ export default function RootLayout({ children }) {
         <Ontop />
         <Slider />
         <Footer />
+        <Script
+              src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+              strategy="afterInteractive"
+            />
       </body>
     </html>
   );

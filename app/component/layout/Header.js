@@ -6,8 +6,14 @@ import styles from "./header.module.css";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // 控制選單展開
+  const [hasMounted, setHasMounted] = useState(false);
+
+useEffect(() => {
+  setHasMounted(true); // 確保只在 client 執行
+}, []);
 
   useEffect(() => {
+
     const handleScroll = () => {
       if (window.scrollY > 50) {
         setIsScrolled(true); // 滾動超過 50px 時，添加 scrolled
@@ -29,7 +35,7 @@ export default function Header() {
     const clickOutside = (event) => {
       if (menuOpen && !event.target.closest(`.${styles.mobileMenu}`)) {
         menuRef.current.click();
-        setPDOpen(false);
+        // setPDOpen(false);
         setTeacherOpen(false);
         setUserOpen(false);
       }
@@ -62,13 +68,13 @@ export default function Header() {
           <div className={styles["dropdown"]}>
             <li>
               <Link
-                href="https://easyhmi.com.tw/products/"
+                href="/products"
                 className={`${styles["dropbtn"]} ${styles.LumiSB}`}
               >
                 商品介紹
               </Link>
             </li>
-            <div className={styles["dropdown-content"]}>
+            <div className={`${styles["dropdown-content"]}`}>
               <Link
                 href="https://easyhmi.com.tw/product-category/%e5%a8%81%e7%b6%b8-weintek-easyview/"
                 className={`${styles["dropdown-link"]} ${styles["dropdown-link-top"]}`}

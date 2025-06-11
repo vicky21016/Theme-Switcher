@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import Breadcrumbs from "../component/Breadcrumbs";
+import Card from "../component/AllCard";
 import styles from "./about.module.css";
 
 export default function about() {
   return (
-    <>
+    <div className="wrapper">
       <h2 className={`fw-bold text-center`}>關於我們</h2>
       <Breadcrumbs
         links={[
@@ -31,18 +32,31 @@ export default function about() {
           <div className="col-12 col-md-6"></div>
         </div>
       </div>
-      <h4 className="fw-bold text-center">後勤支援</h4>
-            <div className={`mb-4 ${styles.sbar}`}></div>
-      <div className="container  mb-5">
+      <h4 className="fw-bold text-center">後勤支援服務</h4>
+            <div className={`mb-5 ${styles.sbar}`}></div>
+      <div className="container mb-5">
         <div className="row">
-          <div className="col-12 col-md-6 text-center fw-bold">
-            HMI技術指導課程
-            <br />
-            伺服馬達選用
-            <br />
-            PLC基礎使用諮詢
-          </div>
-          <div className="col-12 col-md-6"></div>
+          <Card
+        icon="bi bi-cpu"
+        col="col-12 col-md-4"
+        name="PLC 技術支援"
+        text="提供 PLC 應用建議與基礎諮詢"
+        link="/support/plc"
+      />
+      <Card
+        icon="bi bi-gear"
+        col="col-12 col-md-4"
+        name="伺服設定建議"
+        text="根據負載需求提供參數建議"
+        link="/support/servo"
+      />
+      <Card
+        icon="bi bi-book"
+        col="col-12 col-md-4"
+        name="HMI 教學"
+        text="人機介面快速導入與教學"
+        link="/support/hmi"
+      />
         </div>
       </div>
       <h4 className="fw-bold text-center ">經營理念</h4>
@@ -57,6 +71,6 @@ export default function about() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

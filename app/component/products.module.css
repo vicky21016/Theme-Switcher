@@ -1,0 +1,75 @@
+.bag {
+  background-color: #f1f1f2;
+}
+
+.card {
+  background-color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.card h5 {
+  color: #3b3330;
+  transition: color 0.3s ease;
+}
+
+.card img {
+  width: 200px;
+  transition: width 0.3s ease;
+}
+
+/* hover 效果 */
+.card:hover h5 {
+  color: #045edd;
+  font-weight: 600;
+}
+
+.card:hover img {
+  width: 205px;
+}
+
+.card:hover .readMore {
+  /* color: #045edd; */
+  font-weight: 600;
+}
+
+.card:hover .readMore::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.readMore {
+  margin-top: 20px;
+  letter-spacing: 2px;
+  color: #3b3330;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* 箭頭效果 */
+.readMore::after {
+  content: "→";
+  opacity: 0;
+  margin-left: 6px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(-4px);
+}
+
+/* 按鈕 hover 狀態 */
+.readMore:hover {
+  background-color: #045edd;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0;
+}
+
+/* readMore:hover 時也觸發箭頭動畫 */
+.readMore:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}

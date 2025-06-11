@@ -4,24 +4,22 @@ import Link from "next/link";
 import Breadcrumbs from "../component/Breadcrumbs";
 import MainCard from "../component/Card"
 
-export default function applications() {
+export default function products() {
   return (
     <div className="wrapper">
-      <h2 className={`fw-bold text-center`}>應用範例</h2>
+      <h2 className={`fw-bold text-center`}>商品介紹</h2>
       
       <Breadcrumbs
         links={[
           { label: "首頁", href: "/" },
           {
-            label: " 應用範例",
-            href: "/applications",
+            label: " 商品介紹",
+            href: "/products",
             active: true,
           },
         ]}
       />
-      <h6 className={`fw-bold`}>最近消息</h6>
-      <h6 className={`fw-bold`}>近期消息</h6>
-        {/* <MainCard key={article.id} {...article} /> */}
+
     </div>
   );
 }
