@@ -9,7 +9,7 @@ export default function NewsCard({ course }) {
     course._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "./3.jpg";
 
   return (
-    <div className="col-6 col-lg-6 p-0">
+    <div className="col-12 col-sm-6 col-lg-6 mb-4">
       <Link className={styles.courseCard} href={`/news/${course.id}`}>
         <img
           className={styles.img}
@@ -17,7 +17,7 @@ export default function NewsCard({ course }) {
           alt={course.title.rendered}
         />
         <h2
-          className={styles.name}
+          className={`mt-3 ${styles.name}`}
           dangerouslySetInnerHTML={{ __html: course.title.rendered }}
         />
         <p>

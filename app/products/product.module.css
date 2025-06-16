@@ -1,3 +1,6 @@
+.prosection{
+  background-color: #f1f1f2;;
+}
 .bag{
     background-image: url("/bag2.jpg");
   background-size: cover;
@@ -11,4 +14,9 @@ display: flex;
   text-align: center; 
   height: 400px;  
   color: white;
+}
+.wrapper{
+  margin: 0px auto 20px;
+  max-width: 1320px;
+  padding: 0 30px 0;
 }

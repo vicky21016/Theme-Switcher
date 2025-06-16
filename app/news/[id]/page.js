@@ -2,40 +2,88 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import Breadcrumbs from "../../component/Breadcrumbs";
-
+import styles from "../news.module.css";
 
 export default function News() {
-  const [filtered, setFiltered] = useState([]);
+const { id } = useParams();
+  const [course, setCourse] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // 分頁
-  const [currentPage, setCurrentPage] = useState(1);
-  const perPage = 9;
-  const totalPages =
-    filtered.length > 0 ? Math.ceil(filtered.length / perPage) : 1; // 無條件進位
+  useEffect(() => {
+    async function fetchCourse() {
+      try {
+        const res = await fetch(
+          `http://192.168.8.50/wp-json/wp/v2/posts/${id}?_embed`
+        );
+        const data = await res.json();
+        setCourse(data);
+      } catch (error) {
+        console.error("文章載入失敗", error);
+      } finally {
+        setLoading(false);
+      }
+    }
 
-  // 計算當前頁面的第一個教師的索引值
-  const startIndex = (currentPage - 1) * perPage;
-  // 取得當前頁面應該顯示的教師
-  const currentNews = (filtered || []).slice(
-    // .slice() 用來擷取陣列中的一部分元素，而不改變原陣列。
-    startIndex,
-    startIndex + perPage
-  );
+   if (id) {
+      fetchCourse();
+    }
+  }, [id]);
+
+  if (loading) {
+    return (
+      <div className={styles.container2}>
+        <div className={styles.loader27}></div>
+      </div>
+    );
+  }
+
+  const featuredImage =
+    course._embedded?.["wp:featuredmedia"]?.[0]?.source_url || "/3.jpg";
+
   return (
     <div className="wrapper">
-      <h2 className={`fw-bold text-center`}>訊息中心</h2>
+      {/* <h2 className={`fw-bold text-center`}>訊息中心</h2> */}
       <Breadcrumbs
         links={[
           { label: "首頁", href: "/" },
+          // {
+          //   label: " 訊息中心",
+          //   href: "/news",
+          // },
           {
-            label: " 訊息中心",
-            href: "/news",
+            label: `${course.title.rendered}`,
+            href: `/news/${id}`,
             active: true,
           },
         ]}
       />
-     
+      <div className="col-12 mb-4 w-100">
+        <div>
+          <p className={`mt-5 ${styles.date}`}>
+            {new Date(course.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </p>
+          <h2
+            className={`mt-4 ${styles.name}`}
+            dangerouslySetInnerHTML={{ __html: course.title.rendered }}
+          />
+
+          {/* <img
+               className={`mt-5 ${styles.img}`}
+               src={featuredImage}
+               alt={course.title.rendered}
+             /> */}
+          <p
+            className="mt-5"
+            dangerouslySetInnerHTML={{ __html: course.content.rendered }}
+          />
+        </div>
+      </div>
     </div>
   );
 }

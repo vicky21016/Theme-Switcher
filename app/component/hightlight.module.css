@@ -1,0 +1,9 @@
+.img{
+  object-fit: cover;
+  width: 100%; 
+  height: auto;
+}
+
+.text{
+    letter-spacing: 2px;
+}

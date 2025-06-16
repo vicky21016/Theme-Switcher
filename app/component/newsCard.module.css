@@ -1,10 +1,15 @@
+ .wrapper{
+ margin: 90px auto 20px;
+  max-width: 1320px;
+  /* padding: 0 30px 0; */
+ }
  .courseCard {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 90%;
+    width: 100%;
     border-radius: 5px;
-    padding: 20px;
+    /* padding: 20px; */
     cursor: pointer;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     text-decoration: none; 
@@ -153,7 +158,7 @@
   font-weight: bold;
   color: #0000;
   animation: loader27-animation 1s infinite alternate linear;
-  background: radial-gradient(circle closest-side, #f6ce5b 94%, #0000)
+  background: radial-gradient(circle closest-side, white , #0000)
     right/calc(200% - 1em) 100%;
 }
 
@@ -161,5 +166,8 @@
   content: "Loading...";
   background: inherit;
   background-clip: text;
-  background-image: radial-gradient(circle closest-side, #fff 94%, #045EDD);
+  background-image: radial-gradient(circle closest-side, #fff 94%, black);
+}
+.news{
+  background-color: #F1F1F2;
 }

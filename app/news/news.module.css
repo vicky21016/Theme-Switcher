@@ -1,14 +1,68 @@
-.bag{
-    background-image: url("/bag3.jpg");
+.bag {
+  background-image: url("/bag3.jpg");
   background-size: cover;
   background-position: center;
   height: 400px;
 }
-.about{
-display: flex;             
-  justify-content: center;   
-  align-items: center;      
-  text-align: center; 
-  height: 400px;  
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 400px;
   color: white;
+}
+  .name {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    word-wrap: break-word;
+    color: var(--Color, #3b3330);
+    text-overflow: ellipsis;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0 5px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+   
+    @media (max-width: 992px) {
+      font-size: 24px;
+      letter-spacing: 0px;
+    }
+    @media (max-width: 390px) {
+      font-size: 20px;
+      min-height: 40px;
+      -webkit-line-clamp: 2;
+    }
+  }
+.date {
+  color: #86868a;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 5px;
+  letter-spacing: 1px;
+}
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 300px auto 20px;
+}
+
+.loader27 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0000;
+  animation: loader27-animation 1s infinite alternate linear;
+  background: radial-gradient(circle closest-side, white 94%, #0000)
+    right/calc(200% - 1em) 100%;
+}
+
+.loader27::before {
+  content: "Loading...";
+  background: inherit;
+  background-clip: text;
+  background-image: radial-gradient(circle closest-side, #fff 94%, black);
 }

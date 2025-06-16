@@ -62,11 +62,4 @@
   border-radius: 5px;
   margin:0 10px;
 }
-.news{
-  background-color: #F1F1F2;
-}
-.img{
-  object-fit: cover;
-  width: 100%; 
-  height: auto;
-}
+
