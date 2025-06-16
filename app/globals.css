@@ -41,6 +41,29 @@ a {
   padding: 0 30px 0;
 }
 
+/* 隱藏 Google 自動翻譯橫幅與 logo */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+.goog-te-gadget {
+  font-size: 0 !important;
+}
+
+/* Google Translate 下拉選單樣式 */
+#google_translate_element select {
+  padding: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

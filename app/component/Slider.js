@@ -8,7 +8,7 @@ export default function Slider() {
 
   return (
     <section>
-      <div className={`mt-5 lumi-all-wrapper ${styles.courseContainer}`}>
+      <div className={`${styles.courseContainer}`}>
               <div
                 id="carouselExampleIndicators"
                 className="carousel slide"
@@ -61,13 +61,13 @@ export default function Slider() {
                   <div
                     className={`carousel-item active ${styles.carouselItem}`}
                   >
-                    <img className="d-block w-100" src="/teacher-img/m1.jpg" />
+                    <img className="d-block w-100" src="/1-1.jpg" />
                   </div>
                   <div className={`carousel-item ${styles.carouselItem}`}>
-                    <img className="d-block w-100" src="/teacher-img/m2.jpg" />
+                    <img className="d-block w-100" src="/1-2.jpg" />
                   </div>
                   <div className={`carousel-item ${styles.carouselItem}`}>
-                    <img className="d-block w-100" src="/teacher-img/m5.jpg" />
+                    <img className="d-block w-100" src="/m5.jpg" />
                   </div>
                   <div className={`carousel-item ${styles.carouselItem}`}>
                     <img className="d-block w-100" src="/teacher-img/m6.png" />

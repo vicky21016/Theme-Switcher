@@ -17,6 +17,25 @@
     color: var(--Black);
     font-weight: bold;
   }
+.breadcrumbScroll {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.breadcrumbScroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.breadcrumbItem {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
 
   .btns {
     .topIcon {
@@ -62,4 +81,6 @@
   border-radius: 5px;
   margin:0 10px;
 }
-
+/* .courseContainer{
+  margin-top: 80px;
+} */

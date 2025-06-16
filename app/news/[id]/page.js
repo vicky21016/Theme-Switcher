@@ -7,7 +7,7 @@ import Breadcrumbs from "../../component/Breadcrumbs";
 import styles from "../news.module.css";
 
 export default function News() {
-const { id } = useParams();
+  const { id } = useParams();
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +26,7 @@ const { id } = useParams();
       }
     }
 
-   if (id) {
+    if (id) {
       fetchCourse();
     }
   }, [id]);
@@ -48,10 +48,10 @@ const { id } = useParams();
       <Breadcrumbs
         links={[
           { label: "首頁", href: "/" },
-          // {
-          //   label: " 訊息中心",
-          //   href: "/news",
-          // },
+          {
+            label: " 訊息中心",
+            href: "/news",
+          },
           {
             label: `${course.title.rendered}`,
             href: `/news/${id}`,
@@ -73,15 +73,31 @@ const { id } = useParams();
             dangerouslySetInnerHTML={{ __html: course.title.rendered }}
           />
 
-          {/* <img
-               className={`mt-5 ${styles.img}`}
-               src={featuredImage}
-               alt={course.title.rendered}
-             /> */}
-          <p
-            className="mt-5"
-            dangerouslySetInnerHTML={{ __html: course.content.rendered }}
+          <img
+            className={`mt-5 img-fluid w-100 ${styles.img}`}
+            src={featuredImage}
+            alt={course.title.rendered}
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              objectFit: "cover",
+            }}
           />
+          <div
+  className="mt-5"
+  dangerouslySetInnerHTML={{
+    __html: course.content.rendered.replace(
+      /<img [^>]*>/g,
+      (imgTag) => {
+        return imgTag.replace(
+          /<img/,
+          '<img class="img-fluid d-block mx-auto" style="width:100%;max-width:600px;display:block;margin:auto;"'
+        );
+      }
+    ),
+  }}
+/>
+
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import Translate from "./component/layout/Translate";
 import Header from "./component/layout/Header";
 import Ontop from "./component/layout/Ontop";
 import Footer from "./component/layout/Footer";
@@ -24,9 +25,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      {/* <Translate /> */}
         <Header />
         {children}
         <Ontop />
