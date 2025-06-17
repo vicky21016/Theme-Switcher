@@ -26,6 +26,7 @@ export default function products() {
           />
         </div>
         <Products />
+        <img src="./12.jpg" className={styles.img}></img>
       </div>
     </section>
   );

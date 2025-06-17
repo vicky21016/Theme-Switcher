@@ -25,6 +25,8 @@ export default function applications() {
       <h6 className={`fw-bold`}>最近消息</h6>
       <h6 className={`fw-bold`}>近期消息</h6>
         {/* <MainCard key={article.id} {...article} /> */}
-    </div></section>
+    </div>
+     <img src="./9.jpg" className={styles.img}></img>
+    </section>
   );
 }

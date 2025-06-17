@@ -1,6 +1,6 @@
 .header {
   /* background-color: #045EDD; */
-  /* display: flex; */
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -20,8 +20,8 @@
   color: black;
 }
 .logo{
-  /* display: flex;
-   align-items: center; */
+  display: flex;
+   align-items: center;
  img{
    max-width: 200px;
  }
@@ -35,7 +35,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 100px;
+    padding: 0 50px;
     margin: 0;
     font-size: 14px;
     letter-spacing: 1px;
@@ -54,11 +54,13 @@
       /* color: white; */
     }
     li {
-      margin: 10px 0;
+      margin: 10px 35px;
     }
   }
 }
-
+.right{
+  display: flex;
+}
 .dropdown {
   position: relative;
   display: inline-block;
@@ -218,21 +220,7 @@
   .lumiLogo1 {
     display: none;
   }
-  .mobileMenuOut {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
-  .mobileMenu {
-    display: block;
-    color: white;
-    .menu {
-      font-size: 28px;
-    }
-  }
-  .nav {
-    display: none;
-  }
+
 }
 .languageToggle {
   margin-left: 1rem;
@@ -252,4 +240,28 @@
 .languageBtn:hover {
   background: #eee;
 
+}
+/*  rwd */
+@media (max-width: 1250px) {
+  .logo {
+    /* display: none; */
+  }
+   .mobileMenuOut {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  .mobileMenu {
+    display: block;
+    color: white;
+    .menu {
+      font-size: 28px;
+    }
+  } 
+  .nav {
+    display: none;
+  }
+  .right{
+    display: none;
+  }
 }

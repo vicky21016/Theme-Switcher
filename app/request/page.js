@@ -21,7 +21,7 @@ export default function request() {
             },
           ]}
         />
-        <div className={`row g-3 mt-3 ${styles.customTable}`}>
+        <div className={`row g-3 gx-5 mt-3 ${styles.customTable}`}>
           <div className="col-12 col-md-8">
             <table className="w-100">
               <thead>
@@ -106,6 +106,7 @@ export default function request() {
           </div>
         </div>
       </div>
+         <img src="./6.jpg" className={styles.img}></img>
     </section>
   );
 }

@@ -9,7 +9,7 @@ export default function Ontop() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowButton(window.scrollY > 1080);
+      setShowButton(window.scrollY > 960);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);

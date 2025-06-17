@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    letter-spacing: 2px;
     a {
       color: var(--gray);
        text-decoration: none;
@@ -37,42 +38,48 @@
 }
 
 
-  .btns {
-    .topIcon {
-      position: fixed;
-      width: 48px;
-      height: 48px;
-      background: #045EDD;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15),
-        0px 0px 25px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease, transform 0.4s ease;
-      animation: bounce 1.5s infinite ease-in-out;
-      will-change: transform;
-  
-    }
+.topIcon {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  background: #f1f1f1;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.4s ease;
+  animation: bounce 1.5s infinite ease-in-out;
+  will-change: transform;
+  opacity: 0;
+  padding-bottom: 6px;
+  right: 15px;
+  bottom: 40px;
+  z-index: 99;
+  transform: translateY(20px);
+  pointer-events: none;
+}
 
-    .topIcon {
-      opacity: 0;
-      padding-bottom: 6px;
-      right: 15px;
-      bottom: 40px;
-      z-index: 99;
-      transform: translateY(20px);
-    }
+.topIcon:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.1) translateY(-10px);
+}
 
-    .topIcon:hover {
-      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
-      transform: scale(1.1) translateY(-10px);
-    }
-    .topIcon.show {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
+.topIcon.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* 可選的彈跳動畫 */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
   
   .sbar {
   background-color: #045EDD;

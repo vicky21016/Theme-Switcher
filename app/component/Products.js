@@ -5,7 +5,7 @@ import styles from "./products.module.css";
 
 export default function Products() {
   return (
-    <div className={`${styles.bag}`}>
+    <div className={`pb-5 ${styles.bag}`}>
       <section className="container">
         <div className={`row g-5 pt-5 ${styles.product}`}>
           <div className={`col-12 col-sm-6 col-lg-4  `}>

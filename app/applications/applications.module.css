@@ -12,3 +12,9 @@ display: flex;
   height: 400px;  
   color: white;
 }
+.img{
+
+  object-fit: cover;
+  width: 100%; 
+  max-height: 450px;
+}

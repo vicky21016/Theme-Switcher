@@ -90,7 +90,7 @@ export default function about() {
         </div>
         </div>
       </div>
-
+     <img src="./10.jpg" className={styles.img}></img>
     </section>
   );
 }

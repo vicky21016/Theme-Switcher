@@ -58,6 +58,7 @@ export default function News() {
           />
         )}
       </div>
+       <img src="./4.jpg" className={styles.img}></img>
     </section>
   );
 }

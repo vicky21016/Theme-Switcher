@@ -67,16 +67,16 @@ export default function Slider() {
                     <img className="d-block w-100" src="/1-2.jpg" />
                   </div>
                   <div className={`carousel-item ${styles.carouselItem}`}>
-                    <img className="d-block w-100" src="/m5.jpg" />
+                    <img className="d-block w-100" src="/1.jpg" />
                   </div>
                   <div className={`carousel-item ${styles.carouselItem}`}>
-                    <img className="d-block w-100" src="/teacher-img/m6.png" />
+                    <img className="d-block w-100" src="/7.jpg" />
                   </div>
                   <div className={`carousel-item ${styles.carouselItem}`}>
-                    <img className="d-block w-100" src="/teacher-img/m3.jpg" />
+                    <img className="d-block w-100" src="/8.jpg" />
                   </div>
                   <div className={`carousel-item ${styles.carouselItem}`}>
-                    <img className="d-block w-100" src="/teacher-img/m7.jpg" />
+                    <img className="d-block w-100" src="/5.jpg" />
                   </div>
                   <button
                     className="carousel-control-prev"
