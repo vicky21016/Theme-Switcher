@@ -69,7 +69,7 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
      <Link href="/" className={styles["logo"]}>
-        <img src="/logo.png" alt="Logo" />
+        <img src="/Image.png" alt="Logo" />
         {/* <div className={styles.lumiLogo1}>LAZYDOG</div> */}
       </Link>
       <nav className={styles.nav}>
